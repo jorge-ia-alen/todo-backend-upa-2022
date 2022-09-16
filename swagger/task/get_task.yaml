@@ -1,0 +1,13 @@
+Obtener una tarea
+---
+tags:
+- "task"
+responses:
+  200:
+    description: Se trajo correctamente el registor
+  401:
+    description: Las credenciales proveidas en los datos de login son invalidas
+parameters:
+  - name: id
+    in: path
+    required: false

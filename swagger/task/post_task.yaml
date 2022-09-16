@@ -1,0 +1,27 @@
+Crear una tarea
+---
+tags:
+- "task"
+responses:
+  201:
+    description: Se creo correctamente la tarea
+  500:
+    description: Error en la creacion de la tarea
+parameters:
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/Taskpost"
+definitions:
+  Taskpost:
+    type: "object"
+    properties:
+      id:
+        type: "int64"
+      descrip:
+        type: "string"
+      status:
+        type: "string"
+    example:
+      descrip: "bla bla"
+      status: "bla bla"

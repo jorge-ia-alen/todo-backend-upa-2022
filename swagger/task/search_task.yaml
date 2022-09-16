@@ -1,0 +1,30 @@
+Buscador de tareas
+---
+tags:
+- "search"
+responses:
+  200:
+    description: Busqueda realizada correctamente
+parameters:
+  - name: query
+    in: page
+    description: Tareas actuales de la pagina
+    default: 1
+  - name: body
+    in: body
+    schema:
+      $ref: "#/definitions/TaskSearch"
+definitions:
+  TaskSearch:
+    type: "object"
+    properties:
+      id:
+        type: "int64"
+      descrip:
+        type: "string"
+      status:
+        type: "string"
+    example:
+      id: 17
+      descrip: "bla bla"
+      status: "bla bla"

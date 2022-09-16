@@ -1,0 +1,11 @@
+Borra una tarea
+---
+tags:
+- "task"
+responses:
+  200:
+    description: Se borro correctamente el registor
+parameters:
+  - name: id
+    in: path
+    required: false
